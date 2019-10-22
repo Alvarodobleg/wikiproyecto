@@ -1,0 +1,12 @@
+<p>
+¿Qué quieres buscar?
+</p>
+<form [formGroup]="checkoutForm" (ngSubmit)="this.searchFor(checkoutForm.value.word)">
+
+  <div>
+    <input id="word" type="text" formControlName="word">
+  </div>
+<p></p>
+<button class="button" type="submit">Buscar</button>
+<p></p>
+</form>

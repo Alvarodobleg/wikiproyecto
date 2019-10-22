@@ -1,0 +1,7 @@
+{
+  "/w/*":{
+    "target": "https://es.wikipedia.org",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
