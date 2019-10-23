@@ -16,8 +16,12 @@ export class WikiService {
 
   searchFor(text) {
     console.log("Direccion a: " + this.wikipediaUrl + text);
-    this.http
+
+    return this.http
+    
       .get(this.wikipediaUrl + text)
+      // .pipe(tap(data => console.log(data)), map(data = > this.splitDataToArray(data)));
+
       .toPromise()
       .then(data => {
         this.wikipediaData = data;
