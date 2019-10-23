@@ -1,14 +1,17 @@
-<p>
-¿Qué quieres buscar?
-</p>
+
 <form [formGroup]="checkoutForm" (ngSubmit)="this.searchFor(checkoutForm.value.word)">
 
-  <div>
-    <input id="word" type="text" formControlName="word">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-4"> <button class="btn btn-success" type="submit">Buscar</button></div>
+      <div class="col-8"> <input id="word" class="form-control" type="text" formControlName="word"></div>
+    
   </div>
+  
 <p></p>
-<button class="button" type="submit">Buscar</button>
+
 <p></p>
+</div>
 </form>
 
 <app-wiki-frame [wikiResults]='wikiResults'></app-wiki-frame>
