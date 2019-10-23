@@ -1,6 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse } from "@angular/common/http";
-import { Observable } from 'rxjs';
+import { tap, map, subscribeOn } from 'rxjs/operators';
+import { WikiResult } from "./model";
+import { Observable, from } from "rxjs";
 
 @Injectable({
   providedIn: "root"
@@ -8,33 +10,31 @@ import { Observable } from 'rxjs';
 export class WikiService {
   wikipediaData;
   wikipediaUrl = "/w/api.php?action=opensearch&search=";
-  titleArray = [];
-  snippetArray = [];
-  urlArray = [];
 
   constructor(private http: HttpClient) {}
 
-  searchFor(text) {
-    console.log("Direccion a: " + this.wikipediaUrl + text);
-
-    return this.http
-    
-      .get(this.wikipediaUrl + text)
-      // .pipe(tap(data => console.log(data)), map(data = > this.splitDataToArray(data)));
-
-      .toPromise()
-      .then(data => {
-        this.wikipediaData = data;
-        console.log(this.wikipediaData);
-        this.splitDataToArray();
-      });
+  getWiki(text): Observable<WikiResult[]> {
+    return this.http.get(this.wikipediaUrl + text)
+      .pipe(
+        tap(data => console.log("Informacion" + data)),
+        map(data => this.transformToWikiResult(data))
+      );
   }
 
-  splitDataToArray() {
-    this.titleArray = this.wikipediaData[1];
-    this.snippetArray = this.wikipediaData[2];
-    this.urlArray = this.wikipediaData[3];
+  private transformToWikiResult(data): WikiResult[] {
+    data[0];
+    let wikiResults = [];
+    for (let i=0; i<data[1].length && i <3; i++) {
+      let wikiResult: WikiResult = {
+        'title': data[1][i],
+        'snippet': data[2][i],
+        'url': data[3][i]
+      }
+      if (wikiResult.snippet == "") {
+        continue;
+      }
+      wikiResults.push(wikiResult);
+    }
+    return wikiResults;
   }
-
-
 }

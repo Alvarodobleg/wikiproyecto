@@ -1,13 +1,5 @@
-<div>
-  <h3> {{wikiService.titleArray[0]}} </h3>
-</div>
-<div>
-  <h5>
-    {{wikiService.snippetArray[0]}}
-  </h5>
-</div>
-<div id="wiki">
-  <h5>
-    <a href={{wikiService.urlArray[0]}} target="_blank">{{wikiService.urlArray[0]}}</a>
-  </h5>
+<div *ngFor="let wikiResult of wikiResults">
+  <p>{{wikiResult.title}} </p>
+  <p>{{wikiResult.snippet}} </p>
+  <p><a>{{wikiResult.url}}</a></p>
 </div>
