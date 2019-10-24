@@ -2,24 +2,24 @@
 
 
   <div class="container-fluid">
-    <form [formGroup]="checkoutForm" (ngSubmit)="this.searchFor(checkoutForm.value.word)">
-    <div class="row botonbuscar">
-      <div class="col-4"> <button class="btn btn-success" type="submit">Buscar</button></div>
-      <div class="col-8"> <input id="word" class="form-control" type="text" formControlName="word"></div>
-    
-    <form [formGroup]="checkoutForm" (ngSubmit)="this.searchFor(checkoutForm.value.word, 1)">
-        <button class="button" type="submit">A la fortuna</button>
+    <form class="form-group" [formGroup]="checkoutForm" (ngSubmit)="this.searchFor(checkoutForm.value.word)">
+    <div class="row mt-3 mb-2">
+      <div class="col-sm"> <button class="btn btn-success" type="submit">Buscar</button></div>
+      <div class="col-sm"> <input id="word" class="form-control" type="text" formControlName="word"></div>
+      <form class="form-group" [formGroup]="checkoutForm" (ngSubmit)="this.searchFor(checkoutForm.value.word, 1)">
+      <div class="col-sm"><button class="btn btn-warning" type="submit">A la fortuna</button></div>
+          
     </form>
-    <div *ngIf="showSpinner">
-      Esperando...
+    <div class="spinner-border"  *ngIf="showSpinner">
+      
     </div>
   </div>
   </form>
-
+</div>
  
 
 
-
+<div class="container-fluid">
 <div class="row">
   <div class="col-12">
       

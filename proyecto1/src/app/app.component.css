@@ -1,25 +1,16 @@
-p {
-    font-family: Lato;
-    font-size: 50px;
-  }
-  
-  .cabeza {
+  .links {
       background-color: beige;
       cursor: pointer;
       
   }
-  .cabeza:hover {
+  .links:hover {
       background-color:chocolate;
       cursor: pointer;
   }
   
-.footer {
-    margin-top: 10cm;
-}
 
-section {
-    background-color: beige;
-}
+
+
   
 
  
