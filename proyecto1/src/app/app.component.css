@@ -1,20 +1,14 @@
-p {
-  font-family: Lato;
-}
+   .links {
+      background-color: beige;
+      cursor: pointer;
+      
+  }
+  .links:hover {
+      background-color:chocolate;
+      cursor: pointer;
+  }
+  
 
-.cabeza {
-    background-color: beige;
-    cursor: pointer;
-    
-}
-.cabeza:hover {
-    background-color: chocolate;
-    cursor: pointer;
-}
+  
 
-
-.row {
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    margin-bottom: 15px;
-}
+ 

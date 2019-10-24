@@ -1,3 +1,7 @@
 
 
 /* Add application styles & imports to this file! */
+body {
+    background-color: beige;
+    cursor: c
+}

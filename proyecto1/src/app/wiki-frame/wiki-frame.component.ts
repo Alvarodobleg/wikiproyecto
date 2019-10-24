@@ -1,5 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { WikiService } from "../wiki.service";
+import { WikiResult } from "../model";
+//import { InputFrameComponent } from "src/app/input-frame/input-frame.component"
 
 @Component({
   selector: "app-wiki-frame",
@@ -8,7 +10,12 @@ import { WikiService } from "../wiki.service";
 })
 export class WikiFrameComponent implements OnInit {
 
-  constructor(private wikiService: WikiService) {}
+  @Input() wikiResults: WikiResult[];
+
+  constructor(
+    private wikiService: WikiService
+    //private wikiService: InputFrameComponent,
+    ) {}
 
   ngOnInit() {
   }
