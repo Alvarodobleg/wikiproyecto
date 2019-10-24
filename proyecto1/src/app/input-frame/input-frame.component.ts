@@ -25,7 +25,10 @@ export class InputFrameComponent implements OnInit {
   ngOnInit() {}
 
   searchFor(text, cantidad){
+    if(text==""){}
+    else{
     this.showSpinner=true;
     this.wikiService.getWiki(text,cantidad).subscribe(data => {console.log("response:",data); this.wikiResults=data; this.showSpinner=false;});
+    }
   }
 }
