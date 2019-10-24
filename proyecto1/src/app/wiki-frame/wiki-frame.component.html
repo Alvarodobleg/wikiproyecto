@@ -4,7 +4,7 @@
 <div class="col-12 border border-dark results" *ngFor="let wikiResult of wikiResults">
   <p>{{wikiResult.title}} </p>
   <p>{{wikiResult.snippet}} </p>
-  <p><a>{{wikiResult.url}}</a></p>
+  <p><a target="_blank" href="{{wikiResult.url}}">{{wikiResult.url}}</a></p>
 </div>
 </div>
 </div>
