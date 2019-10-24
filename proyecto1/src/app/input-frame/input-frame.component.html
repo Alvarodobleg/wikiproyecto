@@ -1,17 +1,25 @@
 
-<form [formGroup]="checkoutForm" (ngSubmit)="this.searchFor(checkoutForm.value.word)">
 
-  <div class="container">
-    <div class="row justify-content-md-center">
+
+  <div class="container-fluid">
+    <form [formGroup]="checkoutForm" (ngSubmit)="this.searchFor(checkoutForm.value.word)">
+    <div class="row botonbuscar">
       <div class="col-4"> <button class="btn btn-success" type="submit">Buscar</button></div>
       <div class="col-8"> <input id="word" class="form-control" type="text" formControlName="word"></div>
     
   </div>
-  
-<p></p>
+  </form>
 
-<p></p>
-</div>
-</form>
+ 
 
+
+
+<div class="row">
+  <div class="col-12">
+      
 <app-wiki-frame [wikiResults]='wikiResults'></app-wiki-frame>
+</div>
+
+</div>
+
+</div>

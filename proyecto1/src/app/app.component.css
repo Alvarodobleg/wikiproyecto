@@ -1,5 +1,6 @@
 p {
     font-family: Lato;
+    font-size: 50px;
   }
   
   .cabeza {
@@ -8,16 +9,17 @@ p {
       
   }
   .cabeza:hover {
-      background-color: chocolate;
+      background-color:chocolate;
       cursor: pointer;
   }
   
+.footer {
+    margin-top: 10cm;
+}
+
 section {
     background-color: beige;
 }
   
-body {
-    height: 100vh;
-    width: 100vh;
-}  
+
  
