@@ -12,6 +12,7 @@ export class InputFrameComponent implements OnInit {
   checkoutForm;
   
   wikiResults: WikiResult[];
+  showSpinner= false;
 
   constructor(
     private wikiService: WikiService,
@@ -23,7 +24,8 @@ export class InputFrameComponent implements OnInit {
 
   ngOnInit() {}
 
-  searchFor(text){
-    this.wikiService.getWiki(text).subscribe(data => {console.log("response:",data); this.wikiResults=data});
+  searchFor(text, cantidad){
+    this.showSpinner=true;
+    this.wikiService.getWiki(text,cantidad).subscribe(data => {console.log("response:",data); this.wikiResults=data; this.showSpinner=false;});
   }
 }

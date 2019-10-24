@@ -13,25 +13,25 @@ export class WikiService {
 
   constructor(private http: HttpClient) {}
 
-  getWiki(text): Observable<WikiResult[]> {
+  getWiki(text, cantidad: number = 0): Observable<WikiResult[]> {
     return this.http.get(this.wikipediaUrl + text)
       .pipe(
         tap(data => console.log("Informacion" + data)),
-        map(data => this.transformToWikiResult(data))
+        map(data => this.transformToWikiResult(data, cantidad))
       );
   }
 
-  private transformToWikiResult(data): WikiResult[] {
+  private transformToWikiResult(data, cantidad): WikiResult[] {
     data[0];
     let wikiResults = [];
-    for (let i=0; i<data[1].length && i <3; i++) {
+    if(cantidad == 0){
+      cantidad = data[1].length;
+    }
+    for (let i=0; i < cantidad; i++) {
       let wikiResult: WikiResult = {
         'title': data[1][i],
         'snippet': data[2][i],
         'url': data[3][i]
-      }
-      if (wikiResult.snippet == "") {
-        continue;
       }
       wikiResults.push(wikiResult);
     }
