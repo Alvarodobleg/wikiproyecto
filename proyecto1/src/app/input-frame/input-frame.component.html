@@ -1,20 +1,22 @@
 
 
-
-  <div class="container-fluid">
+<!-- Boostrap se organiza en un contenedores que poseen filas y columnas, y la jerarquia es importante respetarla y trabajar con ellas.
+     No debemos colocar contenido fuera de nuestras columnas-->
+  <div class="container-fluid"> <!-- este container es responsive, lo que significa que se adapta al tamaño de la ventana del dispositivo-->
     
     
-    <div class="row justify-content-md-center mt-3 mb-2">
-      <div class="col-1 mr-4"> <button class="btn btn-success" type="submit" (click)="this.searchFor(checkoutForm.value.word)">Buscar</button></div>
+    <div class="row justify-content-md-center mt-3 mb-2"> <!-- la clase de justify-content-center centra nuestro contenido y con las clases de mt y mb definimos los margenes-->
+      <div class="col-1 mr-4"> <button class="btn btn-success" type="submit" (click)="this.searchFor(checkoutForm.value.word)">Buscar</button></div> <!-- Aqui tenemos un boton de boostrap que cuando recibe la accion de click ejecuta la 
+      funcion de searchFor() a la que se le pasa como parametro el valor que hemos introducido en nuestra barra de busqueda-->
 
       <div class="col-">
             <form class="form-group" [formGroup]="checkoutForm"> 
-                <input id="word" class="form-control" type="text" placeholder="Escriba aquí" formControlName="word">
+                <input id="word" class="form-control" type="text" placeholder="Escriba aquí" formControlName="word"><!-- Aqui tenemos la barra de búsqueda con sus propiedades de placeholder y su id word, que nos permite utilizar la informacion que nosotros escribamos en el input-->
             </form>
       </div>
 
-      <div class="col-2 ml-4"> <button class="btn btn-warning" type="submit" (click)="this.searchFor(checkoutForm.value.word, 1)">A la fortuna</button></div>
-    <div class="spinner-border"  *ngIf="showSpinner">
+      <div class="col-2 ml-4"> <button class="btn btn-warning" type="submit" (click)="this.searchFor(checkoutForm.value.word, 1)">A la fortuna</button></div><!-- Aqui esta el otro botón que utiliza la misma funcion del primero, pero solo nos mostrara un resultado-->
+    <div class="spinner-border"  *ngIf="showSpinner"><!-- Un div propio de boostrap que nos muestra un spinner de carga-->
     </div>
   </div>
   
@@ -22,7 +24,7 @@
  
 
 
-<div class="container-fluid">
+<div class="container-fluid"> <!-- este contenedor ocupa el espacion donde se nos mostraran los resultados de nuestro buscador-->
 <div class="row">
   <div class="col-12">
       
