@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { WikiFrameComponent } from './wiki-frame/wiki-frame.component';
 import { WikiService } from './wiki.service';
 import { InputFrameComponent } from './input-frame/input-frame.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
-  imports:      [ BrowserModule, HttpClientModule, ReactiveFormsModule ],
+  imports:      [ BrowserModule, MaterialModule, BrowserAnimationsModule, HttpClientModule, ReactiveFormsModule ],
   declarations: [ AppComponent, WikiFrameComponent, InputFrameComponent ],
   bootstrap:    [ AppComponent ],
   providers: [WikiService]

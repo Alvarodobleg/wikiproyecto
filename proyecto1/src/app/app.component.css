@@ -1,14 +1,31 @@
-   .links {
-      background-color: beige;
-      cursor: pointer;
-      
-  }
-  .links:hover {
-      background-color:chocolate;
-      cursor: pointer;
-  }
-  
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-  
+.navbar {
+    justify-content: space-between;
+}
 
- 
+span {
+    padding-right: 1rem;
+}
+
+/*
+p {
+  font-family: Lato;
+}
+
+.cabeza {
+    background-color: beige;
+    cursor: pointer;
+    
+}
+.cabeza:hover {
+    background-color: chocolate;
+    cursor: pointer;
+}
+
+
+.row {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-bottom: 15px;
+}*/

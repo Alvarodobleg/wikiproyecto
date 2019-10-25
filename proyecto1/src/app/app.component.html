@@ -1,42 +1,34 @@
-<div class="container-fluid">
-	
-	
-	<div class="row justify-content-md-center">
-		<div class="col-md-auto">
-			<h1><img src="../assets/icono.png" alt="icono"></h1>
-		</div>
-		
-	</div>
-		
-	<div class="row justify-content-md-center">
-
-		<div class="col-md-auto justify-content-md-center">
-			<h1 class="display-1"><a href="javascript:document.location.reload();">WIKI REQUESTER</a></h1></div>
-	</div>
-	
-		
-	<div class="row enlaces">
-			<div class="col-4 links border border-primary"><a href="#resultados">Ir a los resultados</a></div>
-			<div class="w-100 "></div>
-			<div class="col-4 links border border-primary">Proximamente...</div>
-			<div class="w-100"></div>
-			<div class="col-4 links border border-primary">Proximamente...</div>
-			<div class="w-100"></div>
-	</div>
-		
-
-		<div class="row">
-			<div id="resultados" class="col-12 mt-4 mb-4">
-				<app-input-frame></app-input-frame>
-			</div>	
-		</div>
-		
-		<div></div>
-		<div class="row mt-4">
-			<div class="col-6">Wiki requester<br>Facultad de ingeniería de telecomuniaciones e informática<br>Soporte y contacto de la aplicación en:
-				<a href="mailto:Wikirequester@support.com">Wikirequester@support.com</a></div>
+<section>
+	<div class="container-fluid">
+		<mat-toolbar class="navbar" color="warn">
+			<div>
+				<div>
+					<div class="media"></div>
+						<h2 class="mat-display-4"><img src="../assets/icono.png" alt="icono">WIKI REQUESTER</h2>
+					</div>
+				</div>
+			<div>
+			<span class="col-4 cabeza"><a href="https://www.w3schools.com">Actualizaciones</a><mat-icon color="primary">android</mat-icon></span>
+			<span class="col-4 cabeza"><a href="https://www.wikipedia.org">Wikipedia</a></span>			
 			</div>
-			
-			
-			
+		</mat-toolbar>
+		<br>
+		<br>
+		<div class="row">
+				<app-input-frame></app-input-frame>
+      <app-wiki-frame id="wiki"></app-wiki-frame>
 		</div>
+
+
+
+<mat-expansion-panel>
+		<mat-expansion-panel-header>
+			<mat-panel-title>Wiki requester</mat-panel-title>
+			<mat-panel-description>Wikipedia</mat-panel-description>
+		</mat-expansion-panel-header>
+		<p>Facultad de ingeniería de telecomuniaciones e informática</p>
+		<p>Soporte y contacto de la aplicación en: <a href="mailto:wikirequester@hotmail.com">Wikirequester@hotmail.com</a></p>
+	</mat-expansion-panel>
+	</div>
+
+</section>
