@@ -5,9 +5,9 @@
   
   
   <div class="row justify-content-md-center mt-3 mb-2">
-    <div class="col-1 mr-4"> <button class="btn btn-success" type="submit" (click)="this.searchFor(checkoutForm.value.word)">Buscar</button></div>
+    <div class="col-2 mr-4"> <button class="btn btn-success" type="submit" (click)="this.searchFor(checkoutForm.value.word)">Buscar</button></div>
     
-    <div class="col-">
+    <div class="col-6">
       <form class="form-group" [formGroup]="checkoutForm"> 
         <input id="word" class="form-control" type="text" placeholder="Escriba aquí" formControlName="word">
       </form>
