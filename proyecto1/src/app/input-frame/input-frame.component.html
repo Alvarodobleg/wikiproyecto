@@ -1,34 +1,30 @@
 
 
 
-  <div class="container-fluid">
+<div class="container-fluid">
+  
+  
+  <div class="row justify-content-md-center mt-3 mb-2">
+    <div class="col-1 mr-4"> <button class="btn btn-success" type="submit" (click)="this.searchFor(checkoutForm.value.word)">Buscar</button></div>
     
+    <div class="col-">
+      <form class="form-group" [formGroup]="checkoutForm"> 
+        <input id="word" class="form-control" type="text" placeholder="Escriba aquí" formControlName="word">
+      </form>
+    </div>
     
-    <div class="row justify-content-md-center mt-3 mb-2">
-      <div class="col-1 mr-4"> <button class="btn btn-success" type="submit" (click)="this.searchFor(checkoutForm.value.word)">Buscar</button></div>
-
-      <div class="col-">
-            <form class="form-group" [formGroup]="checkoutForm"> 
-                <input id="word" class="form-control" type="text" placeholder="Escriba aquí" formControlName="word">
-            </form>
-      </div>
-
-      <div class="col-2 ml-4"> <button class="btn btn-warning" type="submit" (click)="this.searchFor(checkoutForm.value.word, 1)">A la fortuna</button></div>
+    <div class="col-2 ml-4"> <button class="btn btn-warning" type="submit" (click)="this.searchFor(checkoutForm.value.word, 1)">A la fortuna</button></div>
     <div class="spinner-border"  *ngIf="showSpinner">
     </div>
   </div>
   
-</div>
- 
-
-
-<div class="container-fluid">
-<div class="row">
-  <div class="col-12">
+  
+  <div class="row">
+    <div class="col-12">
       
-<app-wiki-frame [wikiResults]='wikiResults'></app-wiki-frame>
-</div>
-
-</div>
-
+      <app-wiki-frame [wikiResults]='wikiResults'></app-wiki-frame>
+    </div>
+    
+  </div>
+  
 </div>
